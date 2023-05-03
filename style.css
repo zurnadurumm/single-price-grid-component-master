@@ -1,0 +1,171 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p{
+    font-size: 1rem;
+    color: white;
+  }
+  body {
+    font-family: var(--karla);
+    background: var(--lightgray);
+    display: grid;
+    place-content: center;
+
+}
+  :root{
+    --karla: 'Karla', sans-serif;
+    --cyan: #4abebd;
+    --darkcyan: #2bb3b1;
+    --bright-yellow: #c0df34;
+    --darken-yellow: #82962a;
+    --lightgray: #deecf2;
+    --grayishblue: #98a6bd;
+
+  }
+  main{
+    max-width: 45rem;
+    
+  }
+  .content{
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.281);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    
+
+  }
+  .main__head{
+    grid-row: 1;
+    grid-column: 1/-1;
+    display: grid;
+    gap: 1rem;
+    padding: 2.5rem;
+
+  }
+  h1{
+    font-size: 1.5rem;
+    color: var(--cyan);
+
+
+  }
+  h2{
+    color: var(--bright-yellow);
+    font-size: 1.2rem;
+
+  }
+  .main__text{
+    color: var(--grayishblue);
+    line-height: 2rem;
+  }
+  .main__subscription{
+    background: var(--darkcyan);
+    color: white;
+    display: grid;
+    gap: 1rem;
+    padding: 2.5rem;
+    
+
+  }
+  h3{
+    font-size: 1.1rem;
+    color: white;
+
+  }
+  .price{
+    font-size: 2rem;
+    font-weight: 700;
+
+  }
+  span{
+    color: var(--lightgray);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+    vertical-align: middle;
+    
+  }
+  .signup{
+    border: 0;
+    border-radius: .25rem ;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.281);
+    color: white;
+    background: var(--bright-yellow);
+    padding: .5rem 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+
+  }
+  .signup:hover{
+    background: var(--darken-yellow);
+  }
+  .main__whyus{
+    padding: 2.5rem;
+    background: var(--cyan);
+    display: grid;
+    gap: 1rem;
+    
+
+  }
+  .whyus__text{
+    font-weight: 400;
+    font-size: .75 rem;
+    color: var(--lightgray);
+
+  }
+  @media (max-width:375px) {
+    .content{
+        grid-template-columns: 1fr;
+    }
+    .main__subscription{
+        padding: 1.5rem;
+    }
+    .main__whyus{
+        padding: 1.5rem;
+    }
+    
+  }
