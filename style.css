@@ -138,6 +138,7 @@
     padding: .5rem 2.5rem;
     font-weight: 700;
     font-size: 1rem;
+    cursor: pointer;
 
   }
   .signup:hover{
